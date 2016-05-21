@@ -6,156 +6,7 @@
     </shared>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8a688a34-6562-4972-82f9-273f5066be11" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/BT200Ctrl.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/animated_vector_drawable_23_4_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/appcompat_v7_23_4_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/hamcrest_core_1_3.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/junit_4_12.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/support_annotations_23_4_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/support_v4_23_4_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/support_vector_drawable_23_4_0.xml" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/rolocolor.iml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BT200CtrlDemo/.idea/.name" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BT200CtrlDemo/.idea/compiler.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BT200CtrlDemo/.idea/copyright/profiles_settings.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BT200CtrlDemo/.idea/gradle.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BT200CtrlDemo/.idea/libraries/BT200Ctrl.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BT200CtrlDemo/.idea/libraries/support_v4_18_0_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BT200CtrlDemo/.idea/misc.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BT200CtrlDemo/.idea/modules.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BT200CtrlDemo/.idea/runConfigurations.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BT200CtrlDemo/.idea/vcs.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BT200CtrlDemo/.idea/workspace.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BT200CtrlDemo/BT200CtrlDemo.iml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BT200CtrlDemo/app/app.iml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BT200CtrlDemo/app/build.gradle" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BT200CtrlDemo/app/libs/BT200Ctrl.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BT200CtrlDemo/app/src/main/AndroidManifest.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BT200CtrlDemo/app/src/main/java/jp/epson/moverio/bt200/demo/bt200ctrldemo/BT200CtrlDemoActivity.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BT200CtrlDemo/app/src/main/res/drawable-hdpi/ic_launcher.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BT200CtrlDemo/app/src/main/res/drawable-mdpi/ic_launcher.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BT200CtrlDemo/app/src/main/res/drawable-xhdpi/ic_launcher.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BT200CtrlDemo/app/src/main/res/drawable-xxhdpi/ic_launcher.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BT200CtrlDemo/app/src/main/res/layout/activity_bt2_ctrl_demo.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BT200CtrlDemo/app/src/main/res/menu/bt2_ctrl_demo.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BT200CtrlDemo/app/src/main/res/menu/main.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BT200CtrlDemo/app/src/main/res/values-sw600dp/dimens.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BT200CtrlDemo/app/src/main/res/values-sw720dp-land/dimens.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BT200CtrlDemo/app/src/main/res/values-v11/styles.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BT200CtrlDemo/app/src/main/res/values-v14/styles.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BT200CtrlDemo/app/src/main/res/values/dimens.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BT200CtrlDemo/app/src/main/res/values/strings.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BT200CtrlDemo/app/src/main/res/values/styles.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BT200CtrlDemo/build.gradle" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BT200CtrlDemo/gradle/wrapper/gradle-wrapper.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BT200CtrlDemo/gradle/wrapper/gradle-wrapper.properties" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BT200CtrlDemo/gradlew" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BT200CtrlDemo/gradlew.bat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BT200CtrlDemo/import-summary.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BT200CtrlDemo/settings.gradle" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BT200_SDK1405B/.idea/.name" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BT200_SDK1405B/.idea/BT200_SDK1405B.iml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BT200_SDK1405B/.idea/compiler.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BT200_SDK1405B/.idea/copyright/profiles_settings.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BT200_SDK1405B/.idea/encodings.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BT200_SDK1405B/.idea/misc.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BT200_SDK1405B/.idea/modules.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BT200_SDK1405B/.idea/workspace.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BT200_SDK1405B/BT200CtrlDemo.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BT200_SDK1405B/BT200CtrlDemo/.classpath" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BT200_SDK1405B/BT200CtrlDemo/.idea/.name" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BT200_SDK1405B/BT200CtrlDemo/.idea/BT200CtrlDemo.iml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BT200_SDK1405B/BT200CtrlDemo/.idea/BT200CtrlDemo.iml.orig" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BT200_SDK1405B/BT200CtrlDemo/.idea/compiler.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BT200_SDK1405B/BT200CtrlDemo/.idea/copyright/profiles_settings.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BT200_SDK1405B/BT200CtrlDemo/.idea/encodings.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BT200_SDK1405B/BT200CtrlDemo/.idea/libraries/libs.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BT200_SDK1405B/BT200CtrlDemo/.idea/misc.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BT200_SDK1405B/BT200CtrlDemo/.idea/misc.xml.orig" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BT200_SDK1405B/BT200CtrlDemo/.idea/modules.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BT200_SDK1405B/BT200CtrlDemo/.idea/vcs.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BT200_SDK1405B/BT200CtrlDemo/.idea/workspace.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BT200_SDK1405B/BT200CtrlDemo/.idea/workspace.xml.orig" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BT200_SDK1405B/BT200CtrlDemo/.project" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BT200_SDK1405B/BT200CtrlDemo/AndroidManifest.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BT200_SDK1405B/BT200CtrlDemo/ic_launcher-web.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BT200_SDK1405B/BT200CtrlDemo/libs/BT200Ctrl.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BT200_SDK1405B/BT200CtrlDemo/libs/android-support-v4.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BT200_SDK1405B/BT200CtrlDemo/proguard-project.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BT200_SDK1405B/BT200CtrlDemo/project.properties" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BT200_SDK1405B/BT200CtrlDemo/res/drawable-hdpi/ic_launcher.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BT200_SDK1405B/BT200CtrlDemo/res/drawable-mdpi/ic_launcher.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BT200_SDK1405B/BT200CtrlDemo/res/drawable-xhdpi/ic_launcher.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BT200_SDK1405B/BT200CtrlDemo/res/drawable-xxhdpi/ic_launcher.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BT200_SDK1405B/BT200CtrlDemo/res/layout/activity_bt2_ctrl_demo.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BT200_SDK1405B/BT200CtrlDemo/res/menu/bt2_ctrl_demo.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BT200_SDK1405B/BT200CtrlDemo/res/menu/main.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BT200_SDK1405B/BT200CtrlDemo/res/values-sw600dp/dimens.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BT200_SDK1405B/BT200CtrlDemo/res/values-sw720dp-land/dimens.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BT200_SDK1405B/BT200CtrlDemo/res/values-v11/styles.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BT200_SDK1405B/BT200CtrlDemo/res/values-v14/styles.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BT200_SDK1405B/BT200CtrlDemo/res/values/dimens.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BT200_SDK1405B/BT200CtrlDemo/res/values/strings.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BT200_SDK1405B/BT200CtrlDemo/res/values/styles.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BT200_SDK1405B/BT200CtrlDemo/src/jp/epson/moverio/bt200/demo/bt200ctrldemo/BT200CtrlDemoActivity.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BT200_SDK1405B/ReadMe_EN.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BT200_SDK1405B/ReadMe_JA.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BT200_SDK1405B/libBT200Ctrl.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BT200_SDK1405B/libBT200Ctrl/BT200Ctrl.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Rolocolor/.gitignore" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Rolocolor/.idea/.name" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Rolocolor/.idea/compiler.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Rolocolor/.idea/copyright/profiles_settings.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Rolocolor/.idea/encodings.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Rolocolor/.idea/gradle.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Rolocolor/.idea/misc.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Rolocolor/.idea/modules.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Rolocolor/.idea/runConfigurations.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Rolocolor/.idea/vcs.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Rolocolor/build.gradle" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Rolocolor/glass/.gitignore" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Rolocolor/glass/build.gradle" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Rolocolor/glass/proguard-rules.pro" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Rolocolor/glass/src/androidTest/java/ro/multibit/rolocolor/ApplicationTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Rolocolor/glass/src/main/AndroidManifest.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Rolocolor/glass/src/main/java/ro/multibit/rolocolor/ActivityGlassMain.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Rolocolor/glass/src/main/res/mipmap-hdpi/ic_launcher.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Rolocolor/glass/src/main/res/mipmap-mdpi/ic_launcher.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Rolocolor/glass/src/main/res/mipmap-xhdpi/ic_launcher.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Rolocolor/glass/src/main/res/mipmap-xxhdpi/ic_launcher.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Rolocolor/glass/src/main/res/values/strings.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Rolocolor/glass/src/main/res/values/styles.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Rolocolor/gradle.properties" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Rolocolor/gradle/wrapper/gradle-wrapper.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Rolocolor/gradle/wrapper/gradle-wrapper.properties" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Rolocolor/gradlew" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Rolocolor/gradlew.bat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Rolocolor/mobile/.gitignore" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Rolocolor/mobile/build.gradle" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Rolocolor/mobile/proguard-rules.pro" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Rolocolor/mobile/src/androidTest/java/ro/multibit/rolocolor/ApplicationTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Rolocolor/mobile/src/main/AndroidManifest.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Rolocolor/mobile/src/main/java/ro/multibit/rolocolor/MainActivity.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Rolocolor/mobile/src/main/res/layout/activity_main.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Rolocolor/mobile/src/main/res/mipmap-hdpi/ic_launcher.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Rolocolor/mobile/src/main/res/mipmap-mdpi/ic_launcher.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Rolocolor/mobile/src/main/res/mipmap-xhdpi/ic_launcher.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Rolocolor/mobile/src/main/res/mipmap-xxhdpi/ic_launcher.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Rolocolor/mobile/src/main/res/mipmap-xxxhdpi/ic_launcher.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Rolocolor/mobile/src/main/res/values-w820dp/dimens.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Rolocolor/mobile/src/main/res/values/colors.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Rolocolor/mobile/src/main/res/values/dimens.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Rolocolor/mobile/src/main/res/values/strings.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Rolocolor/mobile/src/main/res/values/styles.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Rolocolor/mobile/src/test/java/ro/multibit/rolocolor/ExampleUnitTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Rolocolor/settings.gradle" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-    </list>
+    <list default="true" id="8a688a34-6562-4972-82f9-273f5066be11" name="Default" comment="" />
     <ignored path="rolocolor.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -175,20 +26,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="ApplicationTest.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="ApplicationTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/androidTest/java/co/techsylvania/rolocolor/ApplicationTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
+            <state vertical-scroll-proportion="0.17706576">
               <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BT200CtrlDemoActivity.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="BT200CtrlDemoActivity.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/co/techsylvania/rolocolor/BT200CtrlDemoActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="2.2495785">
+            <state vertical-scroll-proportion="0.0">
               <caret line="95" column="57" selection-start-line="95" selection-start-column="57" selection-end-line="95" selection-end-column="57" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -1951,62 +1802,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="rolocolor" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="rolocolor" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="values" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="rolocolor" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="rolocolor" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="java" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -2353,7 +2148,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="14" y="43" width="1256" height="737" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -2408,21 +2203,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/androidTest/java/co/techsylvania/rolocolor/ApplicationTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/co/techsylvania/rolocolor/BT200CtrlDemoActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="2.2495785">
+        <state vertical-scroll-proportion="0.0">
           <caret line="95" column="57" selection-start-line="95" selection-start-column="57" selection-end-line="95" selection-end-column="57" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/androidTest/java/co/techsylvania/rolocolor/ApplicationTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.17706576">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+          <folding />
         </state>
       </provider>
     </entry>
