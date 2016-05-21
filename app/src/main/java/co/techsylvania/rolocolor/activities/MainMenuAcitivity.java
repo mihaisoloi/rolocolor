@@ -51,7 +51,6 @@ public class MainMenuAcitivity extends AppCompatActivity {
 
         MainMenuAdapter adapter = new MainMenuAdapter(items);
         rvMenu.setAdapter(adapter);
-
     }
 
     public AppCompatActivity getActivity() {
