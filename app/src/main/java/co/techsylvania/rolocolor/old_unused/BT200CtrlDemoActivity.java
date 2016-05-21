@@ -1,5 +1,6 @@
-package co.techsylvania.rolocolor;
+package co.techsylvania.rolocolor.old_unused;
 
+import co.techsylvania.rolocolor.R;
 import jp.epson.moverio.bt200.AudioControl;
 import jp.epson.moverio.bt200.DisplayControl;
 import jp.epson.moverio.bt200.SensorControl;
