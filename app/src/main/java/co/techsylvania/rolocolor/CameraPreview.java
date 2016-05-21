@@ -1,73 +1,126 @@
 package co.techsylvania.rolocolor;
 
-import android.content.Context;
+import android.graphics.Bitmap;
+import android.graphics.ImageFormat;
 import android.hardware.Camera;
+import android.os.Handler;
+import android.os.Looper;
 import android.util.Log;
 import android.view.SurfaceHolder;
-import android.view.SurfaceView;
+import android.widget.ImageView;
 
 import java.io.IOException;
 
 /**
  * Created by m2g on 21.05.2016.
  */
-public class CameraPreview extends SurfaceView implements SurfaceHolder.Callback {
-    private static final String TAG = "CameraFeedTag";
-    private SurfaceHolder mHolder;
-    private Camera mCamera;
+public class CameraPreview implements SurfaceHolder.Callback, Camera.PreviewCallback
+{
+    private Camera mCamera = null;
+    private ImageView MyCameraPreview = null;
+    private Bitmap bitmap = null;
+    private int[] pixels = null;
+    private byte[] FrameData = null;
+    private int imageFormat;
+    private int PreviewSizeWidth;
+    private int PreviewSizeHeight;
+    private boolean bProcessing = false;
 
-    public CameraPreview(Context context, Camera camera) {
-        super(context);
-        mCamera = camera;
+    Handler mHandler = new Handler(Looper.getMainLooper());
 
-        // Install a SurfaceHolder.Callback so we get notified when the
-        // underlying surface is created and destroyed.
-        mHolder = getHolder();
-        mHolder.addCallback(this);
-        // deprecated setting, but required on Android versions prior to 3.0
-        mHolder.setType(SurfaceHolder.SURFACE_TYPE_PUSH_BUFFERS);
+    public CameraPreview(int PreviewlayoutWidth, int PreviewlayoutHeight,
+                         ImageView CameraPreview)
+    {
+        PreviewSizeWidth = PreviewlayoutWidth;
+        PreviewSizeHeight = PreviewlayoutHeight;
+        MyCameraPreview = CameraPreview;
+        bitmap = Bitmap.createBitmap(PreviewSizeWidth, PreviewSizeHeight, Bitmap.Config.ARGB_8888);
+        pixels = new int[PreviewSizeWidth * PreviewSizeHeight];
     }
 
-    public void surfaceCreated(SurfaceHolder holder) {
-        // The Surface has been created, now tell the camera where to draw the preview.
-        try {
-            mCamera.setPreviewDisplay(holder);
-            mCamera.startPreview();
-        } catch (IOException e) {
-            Log.d(TAG, "Error setting camera preview: " + e.getMessage());
+    @Override
+    public void onPreviewFrame(byte[] arg0, Camera arg1)
+    {
+        // At preview mode, the frame data will push to here.
+        if (imageFormat == ImageFormat.NV21)
+        {
+            //We only accept the NV21(YUV420) format.
+            if ( !bProcessing )
+            {
+                FrameData = arg0;
+                mHandler.post(DoImageProcessing);
+            }
         }
     }
 
-    public void surfaceDestroyed(SurfaceHolder holder) {
-        // empty. Take care of releasing the Camera preview in your activity.
+    public void onPause()
+    {
+        mCamera.stopPreview();
     }
 
-    public void surfaceChanged(SurfaceHolder holder, int format, int w, int h) {
-        // If your preview can change or rotate, take care of those events here.
-        // Make sure to stop the preview before resizing or reformatting it.
+    @Override
+    public void surfaceChanged(SurfaceHolder arg0, int arg1, int arg2, int arg3)
+    {
+        Camera.Parameters parameters;
 
-        if (mHolder.getSurface() == null){
-            // preview surface does not exist
-            return;
+        parameters = mCamera.getParameters();
+        // Set the camera preview size
+        parameters.setPreviewSize(PreviewSizeWidth, PreviewSizeHeight);
+
+        imageFormat = parameters.getPreviewFormat();
+
+        mCamera.setParameters(parameters);
+
+        mCamera.startPreview();
+    }
+
+    @Override
+    public void surfaceCreated(SurfaceHolder arg0)
+    {
+        mCamera = Camera.open();
+        try
+        {
+            // If did not set the SurfaceHolder, the preview area will be black.
+            mCamera.setPreviewDisplay(arg0);
+            mCamera.setPreviewCallback(this);
         }
-
-        // stop preview before making changes
-        try {
-            mCamera.stopPreview();
-        } catch (Exception e){
-            // ignore: tried to stop a non-existent preview
-        }
-
-        // set preview size and make any resize, rotate or
-        // reformatting changes here
-
-        // start preview with new settings
-        try {
-            mCamera.setPreviewDisplay(mHolder);
-            mCamera.startPreview();
-
-        } catch (Exception e){
-            Log.d(TAG, "Error starting camera preview: " + e.getMessage());
+        catch (IOException e)
+        {
+            mCamera.release();
+            mCamera = null;
         }
     }
+
+    @Override
+    public void surfaceDestroyed(SurfaceHolder arg0)
+    {
+        mCamera.setPreviewCallback(null);
+        mCamera.stopPreview();
+        mCamera.release();
+        mCamera = null;
+    }
+
+    //
+    // Native JNI
+    //
+    public native boolean ImageProcessing(int width, int height,
+                                          byte[] NV21FrameData, int [] pixels);
+    static
+    {
+        System.loadLibrary("ImageProcessing");
+    }
+
+    private Runnable DoImageProcessing = new Runnable()
+    {
+        public void run()
+        {
+            Log.i("MyRealTimeImageProcessing", "DoImageProcessing():");
+            bProcessing = true;
+            ImageProcessing(PreviewSizeWidth, PreviewSizeHeight, FrameData, pixels);
+
+            bitmap.setPixels(pixels, 0, PreviewSizeWidth, 0, 0, PreviewSizeWidth, PreviewSizeHeight);
+            MyCameraPreview.setImageBitmap(bitmap);
+            bProcessing = false;
+        }
+    };
 }
