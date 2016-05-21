@@ -1,6 +1,10 @@
 package co.techsylvania.rolocolor;
 
+import android.Manifest;
+import android.content.pm.PackageManager;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
+import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.Menu;
@@ -38,6 +42,7 @@ public class ColorBlindness extends AppCompatActivity implements CameraBridgeVie
     public static final int      VIEW_MODE_ZOOM      = 5;
     public static final int      VIEW_MODE_PIXELIZE  = 6;
     public static final int      VIEW_MODE_POSTERIZE = 7;
+    public static final int      VIEW_MODE_ZOOMED_TRANSLATED = 8;
 
     private MenuItem mItemPreviewRGBA;
     private MenuItem             mItemPreviewHist;
@@ -47,6 +52,7 @@ public class ColorBlindness extends AppCompatActivity implements CameraBridgeVie
     private MenuItem             mItemPreviewZoom;
     private MenuItem             mItemPreviewPixelize;
     private MenuItem             mItemPreviewPosterize;
+    private MenuItem             mItemPreviewZoomedTranslated;
     private CameraBridgeViewBase mOpenCvCameraView;
 
     private Size                 mSize0;
@@ -97,9 +103,18 @@ public class ColorBlindness extends AppCompatActivity implements CameraBridgeVie
 
         setContentView(R.layout.activity_color_b);
 
-        mOpenCvCameraView = (CameraBridgeViewBase) findViewById(R.id.image_manipulations_activity_surface_view);
-        mOpenCvCameraView.setVisibility(CameraBridgeViewBase.VISIBLE);
-        mOpenCvCameraView.setCvCameraViewListener(this);
+        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.CAMERA)
+                != PackageManager.PERMISSION_GRANTED) {
+            // Camera permission has not been granted.
+
+            requestCameraPermission();
+
+        }
+        else {
+            mOpenCvCameraView = (CameraBridgeViewBase) findViewById(R.id.image_manipulations_activity_surface_view);
+            mOpenCvCameraView.setVisibility(CameraBridgeViewBase.VISIBLE);
+            mOpenCvCameraView.setCvCameraViewListener(this);
+        }
     }
 
     @Override
@@ -140,6 +155,7 @@ public class ColorBlindness extends AppCompatActivity implements CameraBridgeVie
         mItemPreviewZoom  = menu.add("Zoom");
         mItemPreviewPixelize  = menu.add("Pixelize");
         mItemPreviewPosterize = menu.add("Posterize");
+        mItemPreviewZoomedTranslated = menu.add("ZoomedTranslated");
         return true;
     }
 
@@ -162,6 +178,8 @@ public class ColorBlindness extends AppCompatActivity implements CameraBridgeVie
             viewMode = VIEW_MODE_PIXELIZE;
         else if (item == mItemPreviewPosterize)
             viewMode = VIEW_MODE_POSTERIZE;
+        else if (item == mItemPreviewZoomedTranslated)
+            viewMode = VIEW_MODE_ZOOMED_TRANSLATED;
         return true;
     }
 
@@ -210,11 +228,11 @@ public class ColorBlindness extends AppCompatActivity implements CameraBridgeVie
         int rows = (int) sizeRgba.height;
         int cols = (int) sizeRgba.width;
 
-        int left = cols / 8;
-        int top = rows / 8;
+        int left = 0;//cols / 8;
+        int top = 0;//rows / 8;
 
-        int width = cols * 3 / 4;
-        int height = rows * 3 / 4;
+        int width = cols;// * 3 / 4;
+        int height = rows;// * 3 / 4;
 
         switch (ColorBlindness.viewMode) {
             case ColorBlindness.VIEW_MODE_RGBA:
@@ -286,14 +304,14 @@ public class ColorBlindness extends AppCompatActivity implements CameraBridgeVie
                 break;
 
             case ColorBlindness.VIEW_MODE_ZOOM:
-                Mat zoomCorner = rgba.submat(0, rows / 2 - rows / 10, 0, cols / 2 - cols / 10);
-                Mat mZoomWindow = rgba.submat(rows / 2 - 9 * rows / 100, rows / 2 + 9 * rows / 100, cols / 2 - 9 * cols / 100, cols / 2 + 9 * cols / 100);
-                Imgproc.resize(mZoomWindow, zoomCorner, zoomCorner.size());
-                Size wsize = mZoomWindow.size();
-                Imgproc.rectangle(mZoomWindow, new Point(1, 1), new Point(wsize.width - 2, wsize.height - 2), new Scalar(255, 0, 0, 255), 2);
-                zoomCorner.release();
+
+                Mat dst = new Mat();
+                Mat mZoomWindow = inputFrame.rgba().submat(rows / 2 - 20 * rows / 100, rows / 2 + 10 * rows / 100, cols / 2 - 27 * cols / 100, cols / 2 + 3* cols / 100);
+
+                Imgproc.resize(mZoomWindow, dst, rgba.size());
                 mZoomWindow.release();
-                break;
+                
+                return dst;
 
             case ColorBlindness.VIEW_MODE_PIXELIZE:
                 rgbaInnerWindow = rgba.submat(top, top + height, left, left + width);
@@ -315,8 +333,58 @@ public class ColorBlindness extends AppCompatActivity implements CameraBridgeVie
                 Core.convertScaleAbs(mIntermediateMat, rgbaInnerWindow, 16, 0);
                 rgbaInnerWindow.release();
                 break;
+            case ColorBlindness.VIEW_MODE_ZOOMED_TRANSLATED:
+
+                break;
         }
 
         return rgba;
+    }
+
+    private static final int REQUEST_CAMERA = 0;
+
+    private void requestCameraPermission() {
+        if (ActivityCompat.shouldShowRequestPermissionRationale(this,
+                Manifest.permission.CAMERA)) {
+            // Provide an additional rationale to the user if the permission was not granted
+            // and the user would benefit from additional context for the use of the permission.
+            // For example if the user has previously denied the permission.
+//            Snackbar.make(mLayout, R.string.permission_camera_rationale,
+//                    Snackbar.LENGTH_INDEFINITE)
+//                    .setAction(R.string.app_name, new View.OnClickListener() {
+//                        @Override
+//                        public void onClick(View view) {
+//                            ActivityCompat.requestPermissions(ColorBlindness.this,
+//                                    new String[]{Manifest.permission.CAMERA},
+//                                    REQUEST_CAMERA);
+//                        }
+//                    })
+//                    .show();
+        } else {
+
+            // Camera permission has not been granted yet. Request it directly.
+            ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.CAMERA},
+                    REQUEST_CAMERA);
+        }
+    }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions,
+                                           @NonNull int[] grantResults) {
+
+        if (requestCode == REQUEST_CAMERA) {
+
+            // Received permission result for camera permission.est.");
+            // Check if the only required permission has been granted
+            if (grantResults.length == 1 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                // Camera permission has been granted, preview can be displayed
+//                Snackbar.make(mLayout, R.string.permision_available_camera,
+//                        Snackbar.LENGTH_SHORT).show();
+            } else {
+//                Snackbar.make(mLayout, R.string.permissions_not_granted,
+//                        Snackbar.LENGTH_SHORT).show();
+
+            }
+        }
     }
 }
