@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/Rolocolor.iml" filepath="$PROJECT_DIR$/Rolocolor.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/rolocolor.iml" filepath="$PROJECT_DIR$/.idea/rolocolor.iml" />
     </modules>
   </component>
 </project>
