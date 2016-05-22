@@ -13,6 +13,7 @@ import java.util.ArrayList;
 import co.techsylvania.rolocolor.R;
 import co.techsylvania.rolocolor.activities.ColorBlindnessCorrectionActivity;
 import co.techsylvania.rolocolor.activities.SettingsActivity;
+import co.techsylvania.rolocolor.activities.ImageManipulationsActivity;
 import co.techsylvania.rolocolor.model.MainMenuItem;
 
 /**
@@ -44,7 +45,7 @@ public class MainMenuAdapter extends RecyclerView.Adapter<MainMenuAdapter.ViewHo
                     holder.itemView.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View v) {
-                            Intent activityColorCorrection = new Intent(holder.itemView.getContext().getApplicationContext(), ColorBlindnessCorrectionActivity.class);
+                            Intent activityColorCorrection = new Intent(holder.itemView.getContext().getApplicationContext(), ImageManipulationsActivity.class);
                             activityColorCorrection.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                             holder.itemView.getContext().getApplicationContext().startActivity(activityColorCorrection);
                         }
