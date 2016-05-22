@@ -5,11 +5,9 @@ import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v4.app.ActivityCompat;
-import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.WindowManager;
 
 import org.opencv.android.BaseLoaderCallback;
 import org.opencv.android.CameraBridgeViewBase;
@@ -25,60 +23,49 @@ import co.techsylvania.rolocolor.R;
  * An example full-screen activity that shows and hides the system UI (i.e.
  * status bar and navigation/system bar) with user interaction.
  */
-public class ColorBlindnessCorrectionActivity extends AppCompatActivity implements CameraBridgeViewBase.CvCameraViewListener2 {
-    private static final String  TAG                 = ColorBlindnessCorrectionActivity.class.getSimpleName();
+public class ColorBlindnessCorrectionActivity extends ActivityBase implements CameraBridgeViewBase.CvCameraViewListener2 {
+    private static final String TAG = ColorBlindnessCorrectionActivity.class.getSimpleName();
 
-    public static final int      VIEW_MODE_RGBA      = 0;
-    public static final int      VIEW_MODE_ZOOM      = 5;
-    public static final int      VIEW_MODE_ZOOMED_TRANSLATED = 8;
+    public static final int VIEW_MODE_RGBA = 0;
+    public static final int VIEW_MODE_ZOOM = 5;
+    public static final int VIEW_MODE_ZOOMED_TRANSLATED = 8;
 
     private MenuItem mItemPreviewRGBA;
-    private MenuItem             mItemPreviewZoom;
-    private MenuItem             mItemPreviewZoomedTranslated;
+    private MenuItem mItemPreviewZoom;
+    private MenuItem mItemPreviewZoomedTranslated;
     private CameraBridgeViewBase mOpenCvCameraView;
 
 //    private Size                 mSize0;
 
     private Mat mIntermediateMat;
-//    private Mat                  mMat0;
-//    private MatOfInt             mChannels[];
-//    private MatOfInt             mHistSize;
-    private int                  mHistSizeNum = 25;
-//    private MatOfFloat           mRanges;
-//    private Scalar mColorsRGB[];
-//    private Scalar               mColorsHue[];
-//    private Scalar               mWhilte;
-//    private Point mP1;
-//    private Point                mP2;
-//    private float                mBuff[];
-//    private Mat                  mSepiaKernel;
+    private int mHistSizeNum = 25;
+    public static int viewMode = VIEW_MODE_ZOOM;
 
-    public static int           viewMode = VIEW_MODE_RGBA;
-
-    private BaseLoaderCallback  mLoaderCallback = new BaseLoaderCallback(this) {
+    private BaseLoaderCallback mLoaderCallback = new BaseLoaderCallback(this) {
         @Override
         public void onManagerConnected(int status) {
             switch (status) {
-                case LoaderCallbackInterface.SUCCESS:
-                {
+                case LoaderCallbackInterface.SUCCESS: {
                     Log.i(TAG, "OpenCV loaded successfully");
                     mOpenCvCameraView.enableView();
-                } break;
-                default:
-                {
+                }
+                break;
+                default: {
                     super.onManagerConnected(status);
-                } break;
+                }
+                break;
             }
         }
     };
 
 
-    /** Called when the activity is first created. */
+    /**
+     * Called when the activity is first created.
+     */
     @Override
     public void onCreate(Bundle savedInstanceState) {
         Log.i(TAG, "called onCreate");
         super.onCreate(savedInstanceState);
-        getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
 
         setContentView(R.layout.activity_color_b);
 
@@ -88,8 +75,7 @@ public class ColorBlindnessCorrectionActivity extends AppCompatActivity implemen
 
             requestCameraPermission();
 
-        }
-        else {
+        } else {
             mOpenCvCameraView = (CameraBridgeViewBase) findViewById(R.id.image_manipulations_activity_surface_view);
             mOpenCvCameraView.setVisibility(CameraBridgeViewBase.VISIBLE);
             mOpenCvCameraView.setCvCameraViewListener(this);
@@ -97,16 +83,14 @@ public class ColorBlindnessCorrectionActivity extends AppCompatActivity implemen
     }
 
     @Override
-    public void onPause()
-    {
+    public void onPause() {
         super.onPause();
         if (mOpenCvCameraView != null)
             mOpenCvCameraView.disableView();
     }
 
     @Override
-    public void onResume()
-    {
+    public void onResume() {
         super.onResume();
         if (!OpenCVLoader.initDebug()) {
             Log.d(TAG, "Internal OpenCV library not found. Using OpenCV Manager for initialization");
@@ -126,8 +110,8 @@ public class ColorBlindnessCorrectionActivity extends AppCompatActivity implemen
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         Log.i(TAG, "called onCreateOptionsMenu");
-        mItemPreviewRGBA  = menu.add("Preview RGBA");
-        mItemPreviewZoom  = menu.add("Zoom");
+        mItemPreviewRGBA = menu.add("Preview RGBA");
+        mItemPreviewZoom = menu.add("Zoom");
         mItemPreviewZoomedTranslated = menu.add("ZoomedTranslated");
         return true;
     }
@@ -184,11 +168,11 @@ public class ColorBlindnessCorrectionActivity extends AppCompatActivity implemen
                 break;
 
 
-
             case ColorBlindnessCorrectionActivity.VIEW_MODE_ZOOM:
 
                 Mat dst = new Mat();
-                Mat mZoomWindow = inputFrame.rgba().submat(rows / 2 - 20 * rows / 100, rows / 2 + 10 * rows / 100, cols / 2 - 27 * cols / 100, cols / 2 + 3* cols / 100);
+                Mat mZoomWindow = inputFrame.rgba().submat(rows / 2 - 20 * rows / 100, rows / 2 + 10 * rows / 100, cols / 2 - 27 * cols / 100, cols / 2 + 5 * cols / 100);
+                Size newSize = rgba.size();
 
                 Imgproc.resize(mZoomWindow, dst, rgba.size());
                 mZoomWindow.release();

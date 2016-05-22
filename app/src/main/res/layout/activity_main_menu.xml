@@ -5,17 +5,9 @@
     android:background="@drawable/main_bg"
     android:orientation="vertical">
 
-    <Button
-        android:id="@+id/btn3d"
-        android:layout_width="75dp"
-        android:layout_height="50dp"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentTop="true"
-        android:layout_margin="15dp"
-        android:text="2D 3D" />
-
     <android.support.v7.widget.RecyclerView
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="20dp"
         android:id="@+id/rvMenu"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />

@@ -9,15 +9,18 @@
         android:layout_width="50dp"
         android:layout_margin="10dp"
         android:layout_marginRight="5dp"
+        android:visibility="gone"
         android:background="@color/white"
         android:src="@drawable/ic_launcher"
         android:layout_height="50dp" />
 
     <TextView
+        android:drawableLeft="@drawable/selector_indicator_menu"
         android:id="@+id/tvItemName"
         android:layout_toRightOf="@id/ivItem"
         android:textSize="20sp"
         android:layout_centerVertical="true"
+        android:textColor="@drawable/selector_bg_menuitem"
         android:layout_marginLeft="5dp"
         android:layout_width="match_parent"
         android:layout_margin="10dp"

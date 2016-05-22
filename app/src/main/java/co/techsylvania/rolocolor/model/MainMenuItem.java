@@ -7,6 +7,7 @@ public class MainMenuItem {
     public static final int ItemTypeNone = 0;
     public static final int ItemTypeColorCorrection = 1;
     public static final int ItemTypeWorldEnhance = 2;
+    public static final int ItemTypeSettings = 3;
 
     private String itemName;
     private int itemDrawable, itemType;

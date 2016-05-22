@@ -1,11 +1,7 @@
 package co.techsylvania.rolocolor.old_unused;
 
-import co.techsylvania.rolocolor.R;
-import jp.epson.moverio.bt200.AudioControl;
-import jp.epson.moverio.bt200.DisplayControl;
-import jp.epson.moverio.bt200.SensorControl;
-import android.os.Bundle;
 import android.app.Activity;
+import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
 import android.view.View;
@@ -13,6 +9,11 @@ import android.widget.Button;
 import android.widget.CompoundButton;
 import android.widget.SeekBar;
 import android.widget.ToggleButton;
+
+import co.techsylvania.rolocolor.R;
+import jp.epson.moverio.bt200.AudioControl;
+import jp.epson.moverio.bt200.DisplayControl;
+import jp.epson.moverio.bt200.SensorControl;
 
 public class BT200CtrlDemoActivity extends Activity {
 	private String TAG = "Bt2CtrlDemoActivity";
