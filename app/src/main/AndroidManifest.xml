@@ -19,6 +19,14 @@
 
             android:theme="@style/FullscreenTheme">
         </activity>
+        <activity
+            android:name=".activities.ImageManipulationsActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="landscape"
+            android:label="@string/app_name"
+
+            android:theme="@style/FullscreenTheme">
+        </activity>
         <activity android:name=".activities.MainMenuAcitivity"
             android:screenOrientation="landscape">
             <intent-filter>
